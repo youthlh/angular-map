@@ -1,1 +1,237 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    margin: 0;
+    background-color: #eef0f3 !important;
+    font-size: 12px !important;
+    font-family: 'Roboto-Regular', 'PingFangSC', '微软雅黑' !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+dl,
+dt,
+dd {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    border: none;
+}
+
+a,
+a:hover,
+a:visited,
+a:link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a,
+input,
+button,
+textarea,
+select,
+button,
+:focus {
+    outline: none;
+}
+
+input,
+textarea,
+select,
+button {
+    vertical-align: middle;
+}
+
+
+/*滚动条*/
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(31, 37, 68, 0.3);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(31, 37, 68, 0.3);
+}
+
+::-moz-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-moz-scrollbar-track {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+::-moz-scrollbar-thumb {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(31, 37, 68, 0.3);
+}
+
+::-moz-scrollbar-thumb:window-inactive {
+    background: rgba(31, 37, 68, 0.3);
+}
+
+::scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::scrollbar-track {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: transparent;
+}
+
+::scrollbar-thumb {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    background: rgba(31, 37, 68, 0.3);
+}
+
+::scrollbar-thumb:window-inactive {
+    background: rgba(31, 37, 68, 0.3);
+}
+
+
+/*placeholder*/
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #9ea7b4 !important;
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #9ea7b4 !important;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #9ea7b4 !important;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #9ea7b4 !important;
+}
+
+
+/*display*/
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.v-h {
+    visibility: hidden;
+}
+
+.v-v {
+    visibility: visible;
+}
+
+.t-o-e {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/*vertical-align*/
+
+.v-b {
+    vertical-align: bottom;
+}
+
+.v-t {
+    vertical-align: top;
+}
+
+.v-m {
+    vertical-align: middle;
+}
+
+
+/*text-align*/
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-l {
+    text-align: left;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+
+/*float*/
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fn {
+    float: none;
+}
+
+
+/*清除浮动*/
+
+.clrfix:after {
+    content: '.';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.clrfix {
+    zoom: 1;
+}

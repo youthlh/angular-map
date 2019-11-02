@@ -38,17 +38,20 @@ import 'echarts/map/js/province/xinjiang';//新疆
 import 'echarts/map/js/province/xizang';//西藏
 import 'echarts/map/js/province/yunnan';//云南
 import 'echarts/map/js/province/zhejiang';//浙江
-import { changzhishi } from './../assets/province/shanxi/changzhishi.model';
-import { datongshi } from './../assets/province/shanxi/datongshi.model';
-import { jinchengshi } from './../assets/province/shanxi/jinchengshi.model';
-import { jinzhongshi } from './../assets/province/shanxi/jinzhongshi.model';
-import { linfenshi } from './../assets/province/shanxi/linfenshi.model';
-import { lvliangshi } from './../assets/province/shanxi/lvliangshi.model';
-import { shuozhoushi } from './../assets/province/shanxi/shuozhoushi.model';
-import { taiyuanshi } from './../assets/province/shanxi/taiyuanshi.model';
-import { xingzhoushi } from './../assets/province/shanxi/xingzhoushi.model';
-import { yangquanshi } from './../assets/province/shanxi/yangquanshi.model';
-import { yunchenshi } from './../assets/province/shanxi/yunchenshi.model';
+/**
+ * 山西省
+ */
+import { 长治市 } from './../assets/province/山西省/changzhishi.model';
+import { 大同市 } from './../assets/province/山西省/datongshi.model';
+import { 晋城市 } from './../assets/province/山西省/jinchengshi.model';
+import { 晋中市 } from './../assets/province/山西省/jinzhongshi.model';
+import { 临汾市 } from './../assets/province/山西省/linfenshi.model';
+import { 吕梁市 } from './../assets/province/山西省/lvliangshi.model';
+import { 朔州市 } from './../assets/province/山西省/shuozhoushi.model';
+import { 太原市 } from './../assets/province/山西省/taiyuanshi.model';
+import { 忻州市 } from './../assets/province/山西省/xingzhoushi.model';
+import { 阳泉市 } from './../assets/province/山西省/yangquanshi.model';
+import { 运城市 } from './../assets/province/山西省/yunchenshi.model';
 
 
 @Component({
@@ -60,72 +63,264 @@ import { yunchenshi } from './../assets/province/shanxi/yunchenshi.model';
 })
 export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('main', { static: false }) main: ElementRef;
-  taiyuanshi: taiyuanshi = new taiyuanshi();
-  shuozhoushi: shuozhoushi = new shuozhoushi();
-
+  /**
+   * 山西省
+   */
+  长治市: 长治市 = new 长治市();
+  大同市: 大同市 = new 大同市();
+  晋城市: 晋城市 = new 晋城市();
+  晋中市: 晋中市 = new 晋中市();
+  临汾市: 临汾市 = new 临汾市();
+  吕梁市: 吕梁市 = new 吕梁市();
+  朔州市: 朔州市 = new 朔州市();
+  太原市: 太原市 = new 太原市();
+  忻州市: 忻州市 = new 忻州市();
+  阳泉市: 阳泉市 = new 阳泉市();
+  运城市: 运城市 = new 运城市();
   myChart: any = null;
-
+  山西Data: Array<any> = [
+    {
+      "name": "大同市",
+      "value": [
+        113.295259,
+        40.09031,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "朔州市",
+      "value": [
+        112.433387,
+        39.331261,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "忻州市",
+      "value": [
+        112.733538,
+        38.41769,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "吕梁市",
+      "value": [
+        111.134335,
+        37.524366,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "太原市",
+      "value": [
+        112.549248,
+        37.857014,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "晋中市",
+      "value": [
+        112.736465,
+        37.696495,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "阳泉市",
+      "value": [
+        113.583285,
+        37.861188,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "临汾市",
+      "value": [
+        111.517973,
+        36.08415,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "长治市",
+      "value": [
+        113.113556,
+        36.191112,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "运城市",
+      "value": [
+        111.003957,
+        35.022778,
+        1000,
+        100
+      ]
+    },
+    {
+      "name": "晋城市",
+      "value": [
+        112.851274,
+        35.497553,
+        1000,
+        100
+      ]
+    },
+  ]
+  // 大同市Data: Array<any> = [
+  //   {
+  //     "name": "大同市",
+  //     "value": [
+  //       114.279252,
+  //       39.763051
+  //       1000,
+  //       200
+  //     ]
+  //   },
+  // ]
   constructor() { }
   ngOnInit(): void {
 
   }
-  ngAfterViewInit(): void {
+  setOption(city?: string) {
+    city = city ? city : '山西'
+    this.myChart.clear();
     this.myChart = echarts.init(this.main.nativeElement);
     const option = {
+      /**
+        * 图例数据展示
+        */
+      visualMap: {
+        show: true,
+        itemWidth: '10%',
+        itemHeight: '100%',
+        inRange: {
+          color: ['#007ebb', '#00466a']
+        },
+        type: 'continuous',
+        orient: 'horizontal',
+        text: ['', '数据展示'],
+        left: 'center',
+        realtime: true,
+        hoverLink: true,
+        textStyle: {
+          fontFamily: 'PingFangSC-Regular',
+          fontSize: 16,
+          color: '#ffffff'
+        }
+      },
+      /**
+       * 提示框
+       */
+      tooltip: {
+        trigger: 'item',
+        formatter: function (params) {
+          let relVal
+          relVal = `<div style="z-index:999;color:#ffffff;font-size:12px;text-align:left;background: #192675;margin:-5px;border: 1px solid #020641;border-radius:5px;padding:12px">
+              <span style='line-height:10px;display: inline-block;height:10px;
+              width:10px;border-radius:50%;border: 1px solid #FFFFFF;background:
+              ${params.color};margin-right:4px'></span>
+              ${params.name}<span style="margin:0 4px 0 2px">:</span>${
+            params.value[3]
+            }
+            </div>`
+          return relVal
+        }
+      },
       geo3D: {
-        map: '云南',
+        map: city == '山西' ? '山西' : 'city',
         roam: true,
         itemStyle: {
           areaColor: 'rgb(5,101,123)',
           opacity: 1,
-          borderWidth: 0.8,
+          borderWidth: 1,
           borderColor: 'rgb(62,215,213)'
         },
         label: {
-          show: true,
-          textStyle: {
-            color: 'yellow', //地图初始化区域字体颜色
-            fontSize: 24,
-            opacity: 1,
-            backgroundColor: 'rgba(0,0,0,0)'
-            //backgroundColor: 'rgba(53,171,199,0)'
-          },
+          show: false,
         },
         emphasis: { //当鼠标放上去  地区区域是否显示名称
           label: {
-            show: true,
-            textStyle: {
-              color: 'yellow',
-              fontSize: 24,
-            }
+            show: false
           }
         },
-        //shading: 'lambert',
+        shading: 'lambert',
         light: { //光照阴影
           main: {
             color: '#fff', //光照颜色
             intensity: 1.2, //光照强度
-            //shadowQuality: 'high', //阴影亮度
-            shadow: false, //是否显示阴影
-            alpha: 55,
-            beta: 10
+            shadowQuality: 'high', //阴影亮度
+            shadow: true, //是否显示阴影
+            alpha: 150,
+            beta: 150
 
           },
-          ambient: {
-            intensity: 0.3
-          }
         },
+        viewControl: {
+          distance: 220,
+        },
+        environment: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+          offset: 0, color: '#00aaff' // 天空颜色
+        }, {
+          offset: 0.7, color: '#998866' // 地面颜色
+        }, {
+          offset: 1, color: '#998866' // 地面颜色
+        }], false),
       },
       series: [
-
+        {
+          type: 'scatter3D',
+          coordinateSystem: 'geo3D',
+          data: this.山西Data,
+          symbol: 'pin',
+          symbolSize: 30,
+          itemStyle: {
+            color: 'red',
+            borderColor: '#fff',
+            borderWidth: 1
+          },
+          label: {
+            show: true,
+            formatter: '{b}',
+            position: 'top',
+            textStyle: {
+              color: '#000000', //地图初始化区域字体颜色
+              fontSize: 20,
+              fontWeight: 'bold',
+              backgroundColor: 'rgba(0,0,0,0)'
+            }
+          }
+        },
       ]
     };
-    if(true){
-      // this.taiyuanshi.city(echarts)3
+    if (this[city]) {
+      this[city].city(echarts)
     }
     this.myChart.setOption(option);
+
   }
-  alias(){
+  ngAfterViewInit(): void {
+    const _that = this;
+    this.myChart = echarts.init(this.main.nativeElement);
+
+    this.myChart.on("click", function (params) {
+      _that.setOption(params.name)
+    });
+    this.setOption()
+  }
+  alias() {
 
   }
 }

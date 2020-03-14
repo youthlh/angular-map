@@ -4,6 +4,7 @@ import { appService } from './app.service';
 import echarts from 'echarts';
 import 'echarts-gl'; //3D地图
 import 'echarts/map/js/china';//china
+import 'echarts/map/js/world';//world
 import 'echarts/map/js/province/anhui';//安徽
 import 'echarts/map/js/province/aomen';//澳门
 import 'echarts/map/js/province/beijing';//北京
@@ -179,50 +180,45 @@ export class AppComponent implements OnInit, AfterViewInit {
       ]
     },
   ]
-  // 大同市Data: Array<any> = [
-  //   {
-  //     "name": "大同市",
-  //     "value": [
-  //       114.279252,
-  //       39.763051
-  //       1000,
-  //       200
-  //     ]
-  //   },
-  // ]
   constructor() { }
   ngOnInit(): void {
 
   }
+  /**
+   *
+   * @param city
+   * 设置渲染的参数
+   */
   setOption(city?: string) {
-    city = city ? city : '山西'
-    this.myChart.clear();
-    this.myChart = echarts.init(this.main.nativeElement);
+    city = city ? city : '山西';
+    this.myChart.clear();//清除数据初始化
+    this.myChart = echarts.init(this.main.nativeElement);//echarts挂载在页面
     const option = {
       /**
         * 图例数据展示
         */
       visualMap: {
-        show: true,
-        itemWidth: '10%',
-        itemHeight: '100%',
+        show: true,//是否显示 visualMap-continuous 组件。如果设置为 false，不会显示，但是数据映射的功能还存在
+        itemWidth: '10%',//图形的宽度，即长条的宽度
+        itemHeight: '100%',//图形的高度，即长条的高度
         inRange: {
-          color: ['#007ebb', '#00466a']
-        },
-        type: 'continuous',
-        orient: 'horizontal',
-        text: ['', '数据展示'],
+          color: ['#ffffff', '#000000']
+        },//定义 在选中范围中 的视觉元素颜色
+        type: 'continuous',// 定义图例的类型
+        orient: 'horizontal',//图例放置的类型
+        text: ['', '数据展示'],//显示的文案
         left: 'center',
-        realtime: true,
-        hoverLink: true,
+        realtime: true,//拖拽时，是否实时更新
+        hoverLink: true,//鼠标悬浮到 visualMap 组件上时，鼠标位置对应的数值 在 图表中对应的图形元素，会高亮
         textStyle: {
           fontFamily: 'PingFangSC-Regular',
           fontSize: 16,
           color: '#ffffff'
-        }
+        }//文案的样式
       },
       /**
        * 提示框
+       * 鼠标移入显示的数据格式
        */
       tooltip: {
         trigger: 'item',
@@ -239,53 +235,70 @@ export class AppComponent implements OnInit, AfterViewInit {
           return relVal
         }
       },
+      /**
+       * 三维的地理坐标系组件
+       */
       geo3D: {
+        /**
+         * 最底部的数据显示中国=>china;其他为对应的汉字例如:map:'china';map:'山西'
+         */
         map: city == '山西' ? '山西' : 'city',
-        roam: true,
         itemStyle: {
-          areaColor: 'rgb(5,101,123)',
-          opacity: 1,
-          borderWidth: 1,
-          borderColor: 'rgb(62,215,213)'
+          // color: 'yellow',//图形的颜色。 默认从全局调色盘 option.color 获取颜色
+          opacity: 1,//图形的不透明度
+          borderWidth: 1,//图形描边的宽度。加上描边后可以更清晰的区分每个区域
+          borderColor: 'rgb(62,215,213)'//图形描边的宽度的颜色
         },
         label: {
           show: false,
-        },
-        emphasis: { //当鼠标放上去  地区区域是否显示名称
+        },//标签的相关设置。地图自己带的标签
+        emphasis: {
           label: {
-            show: false
+            show: true
           }
-        },
+        },//当鼠标放上去  地区区域是否显示名称 具体参数详见 echartsjs.com/zh/option-gl.html#geo3D.emphasis
+        /**
+         * 三维地理坐标系组件中三维图形的着色效果。echarts-gl 中支持下面三种着色方式：
+         * 'color' 只显示颜色，不受光照等其它因素的影响。
+         *'lambert' 通过经典的 lambert 着色表现光照带来的明暗。
+         *'realistic' 真实感渲染，配合 light.ambientCubemap 和 postEffect 使用可以让展示的画面效果和质感有质的提升。ECharts GL 中使用了基于物理的渲染（PBR） 来表现真实感材质。
+         */
         shading: 'lambert',
-        light: { //光照阴影
+        /**
+         * 光照相关的设置。在 shading 为 'color' 的时候无效。
+         */
+        light: {
           main: {
             color: '#fff', //光照颜色
             intensity: 1.2, //光照强度
             shadowQuality: 'high', //阴影亮度
             shadow: true, //是否显示阴影
-            alpha: 150,
+            alpha: 150,//光源方向
             beta: 150
 
           },
         },
         viewControl: {
-          distance: 220,
-        },
+          distance: 220,//默认视角距离主体的距离
+        },//viewControl用于鼠标的旋转，缩放等视角控制。
         environment: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
           offset: 0, color: '#00aaff' // 天空颜色
         }, {
           offset: 0.7, color: '#998866' // 地面颜色
         }, {
           offset: 1, color: '#998866' // 地面颜色
-        }], false),
+        }], false),//环境贴图。支持纯色、渐变色、全景贴图的 url。默认为 'auto'
       },
+      /**
+       * 系列列表
+       */
       series: [
         {
-          type: 'scatter3D',
-          coordinateSystem: 'geo3D',
+          type: 'scatter3D',//类型
+          coordinateSystem: 'geo3D',//系列使用的坐标系
           data: this.山西Data,
-          symbol: 'pin',
-          symbolSize: 30,
+          symbol: 'pin',//散点的形状
+          symbolSize: 30,//散点标记的大小
           itemStyle: {
             color: 'red',
             borderColor: '#fff',
@@ -311,16 +324,18 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.myChart.setOption(option);
 
   }
+  /***
+   * 生命周期
+   * 在初始化之后的操作
+   */
   ngAfterViewInit(): void {
     const _that = this;
     this.myChart = echarts.init(this.main.nativeElement);
 
     this.myChart.on("click", function (params) {
+      debugger
       _that.setOption(params.name)
     });
     this.setOption()
-  }
-  alias() {
-
   }
 }

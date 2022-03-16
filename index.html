@@ -9,18 +9,32 @@
     <link rel="icon" href="img/favicon.ico">
 
     <!--主要css样式-->
-    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<!--     <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/stylesCode.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesCode.css"> -->
 
     <!--可无视-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+<!--     <link rel="stylesheet" type="text/css" href="css/style.css"> -->
 
 </head>
 
 <body>
+    <img id="girlImg" src="img/aa.jpg" alt="">
+    <button class="downloadBtn" type="button" onclick="downloadImg()">下载图片</button>
+    <script>
+     function downloadImg(){
+        var img = document.getElementById('girlImg'); // 获取要下载的图片
+        var url = img.src;                            // 获取图片地址
+        var a = document.createElement('a');          // 创建一个a节点插入的document
+        var event = new MouseEvent('click')           // 模拟鼠标click点击事件
+        a.download = 'beautifulGirl'                  // 设置a节点的download属性值
+        a.href = url;                                 // 将图片的src赋值给a节点的href
+        a.dispatchEvent(event)                        // 触发鼠标点击事件
+     }
+        downloadImg()
+    </script>
 
-    <div class="content clearfix">
+<!--     <div class="content clearfix">
         <div class="section-container col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
             <div class="section clearfix">
                 <div class="sec-header col-xs-10 col-xs-offset-1">
@@ -1813,7 +1827,7 @@
             </div>
 
         </div>
-    </div>
+    </div> -->
 
 
 </body>

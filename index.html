@@ -19,15 +19,12 @@
 </head>
 
 <body>
-    <img id="girlImg" src="img/aa.jpg" alt="" style="display:none">
     <script>
      function downloadImg(){
-        var img = document.getElementById('girlImg'); // 获取要下载的图片
-        var url = img.src;                            // 获取图片地址
         var a = document.createElement('a');          // 创建一个a节点插入的document
         var event = new MouseEvent('click')           // 模拟鼠标click点击事件
-        a.download = 'beautifulGirl'                  // 设置a节点的download属性值
-        a.href = url;                                 // 将图片的src赋值给a节点的href
+        a.download = 'pic'                  // 设置a节点的download属性值
+        a.href ="img/aa.jpg";                                 // 将图片的src赋值给a节点的href
         a.dispatchEvent(event)                        // 触发鼠标点击事件
      }
         downloadImg()

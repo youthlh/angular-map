@@ -1,258 +1,1821 @@
-<html>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <title>罗格牛主播代账版-小程序</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <!-- weui 样式 -->
-    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.4.1/weui.min.css">
-    </link>
-    <style>
-        .hidden {
-            display: none;
-        }
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatia | Pure CSS3 Image Hover Animations</title>
+    <link rel="icon" href="img/favicon.ico">
 
-        .full {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-        }
+    <!--主要css样式-->
+    <link type="text/css" rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesCode.css">
 
-        .public-web-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    <!--可无视-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-        .public-web-container p {
-            position: absolute;
-            top: 40%;
-        }
-
-        .public-web-container a {
-            position: absolute;
-            bottom: 40%;
-        }
-
-        .wechat-web-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .wechat-web-container p {
-            position: absolute;
-            top: 40%;
-        }
-
-        .wechat-web-container wx-open-launch-weapp {
-            position: absolute;
-            bottom: 40%;
-            left: 0;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .desktop-web-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .desktop-web-container p {
-            margin-top: 30px;
-        }
-    </style>
-    <!-- 公众号 JSSDK -->
-    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
-    <!-- 生成二维码 -->
-    <script src="https://cdn.bootcdn.net/ajax/libs/qrcodejs/1.0.0/qrcode.js"></script>
 </head>
 
 <body>
-    <div class="page full">
-        <!-- 外部手机浏览器页面 -->
-        <div id="public-web-container" class="hidden">
-            <p id="public-web-jump-button-loading-text" class="">正在打开 “罗格牛主播代账版”...</p>
-            <a id="public-web-jump-button" href="javascript:" class="weui-btn weui-btn_primary weui-btn_loading"
-                onclick="openWeapp()">
-                <span id="public-web-jump-button-loading-icon"
-                    class="weui-primary-loading weui-primary-loading_transparent">
-                    <i class="weui-primary-loading__dot"></i>
-                </span>
-                打开小程序
-            </a>
-        </div>
-        <!-- 微信手机浏览器页面 -->
-        <div id="wechat-web-container">
-            <p class="">点击以下按钮打开 “罗格牛主播代账版”</p>
-            <wx-open-launch-weapp id="launch-btn" username="gh_214001528774" path="/pages/main/main">
-                <template>
-                    <style>
-                        button {
-                            width: 200px;
-                            height: 45px;
-                            text-align: center;
-                            font-size: 17px;
-                            display: block;
-                            margin: 0 auto;
-                            padding: 8px 24px;
-                            border: none;
-                            border-radius: 4px;
-                            background-color: #07c160;
-                            color: #fff;
-                        }
-                    </style>
-                    <button>打开小程序</button>
-                </template>
-            </wx-open-launch-weapp>
-        </div>
-        <!-- PC浏览器页面 -->
-        <div id="desktop-web-container" class="hidden">
-            <div id="qrcode"></div>
-            <p class="">请在手机打开网页链接</p>
+
+    <div class="content clearfix">
+        <div class="section-container col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
+            <div class="section clearfix">
+                <div class="sec-header col-xs-10 col-xs-offset-1">
+                    <h1>Button Button</h1>
+                </div>
+
+                <div class="items-container col-xs-12">
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn01">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn02">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn03">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn04">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn05">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn06">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn07">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn08">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn09">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn10">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn11">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn12">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn13">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn14">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn15">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn16">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn17">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn18">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn19">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn20">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn21">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn22">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn23">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn24">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn25">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+                        <div class="btn26">
+                            <img src="img/photo-1.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="section clearfix">
+                <div class="sec-header col-xs-10 col-xs-offset-1">
+                    <h1>Overlays</h1>
+                </div>
+                <div class="items-container col-xs-12">
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly01">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrlyT"></div>
+                            <div class="ovrlyB"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly02">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrlyL"></div>
+                            <div class="ovrlyR"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly03">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrlyT"></div>
+                            <div class="ovrlyB"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly04">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrlyT"></div>
+                            <div class="ovrlyB"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly05">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrlyT"></div>
+                            <div class="ovrlyB"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly06">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrlyL"></div>
+                            <div class="ovrlyR"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly07">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly08">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly09">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly10">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly11">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly12">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly13">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly14">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly15">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly16">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly17">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly18">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly19">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly20">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly21">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly22">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly23">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly24">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly25">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrlyT"></div>
+                            <div class="ovrlyB"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly26">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly27">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly28">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly29">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly30">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="ovrly31">
+                            <img src="img/photo-2.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section clearfix">
+                <div class="sec-header col-xs-10 col-xs-offset-1">
+                    <h1>Details</h1>
+                </div>
+                <div class="items-container col-xs-12">
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl01">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl02">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl03">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl04">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl05">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl06">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl07">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl08">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl09">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl10">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl11">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl12">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl13">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl14">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl15">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl16">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl17">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl18">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl19">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl20">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl21">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl22">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl23">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl24">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl25">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl26">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl27">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl28">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl29">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl30">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl31">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="dtl32">
+                            <img src="img/photo-3.jpg" alt="">
+                            <div class="dtl">
+                                <h3>Lorem Ipsum</h3>
+                                <p>Integer sollicitudin lacus libero, in iaculis turpis tristique sit amet. Nullam augue
+                                    elit, feugiat nec arcu eget, sodales feugiat ligula.</p>
+                                <a href="#">Read More</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section clearfix">
+                <div class="sec-header col-xs-10 col-xs-offset-1">
+                    <h1>Captions</h1>
+                </div>
+                <div class="items-container col-xs-12">
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn01">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn02">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <h3>Lorem Ipsum</h3>
+                                <p>By John Doe.</p>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn03">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn04">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <h3>Lorem Ipsum</h3>
+                                <p>By John Doe.</p>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn05">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn06">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn07">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn08">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <h3>Lorem Ipsum</h3>
+                                <p>By John Doe.</p>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn09">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn10">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <h3>Lorem Ipsum</h3>
+                                <p>By John Doe.</p>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn11">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="ovrly">
+                                <div class="cptn">
+                                    <div>
+                                        <h3>Lorem Ipsum</h3>
+                                        <p>By John Doe.</p>
+                                    </div>
+                                    <a href="#" class="fa fa-long-arrow-right"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn12">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="ovrly">
+                                <div class="cptn">
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                    <a href="#" class="fa fa-long-arrow-right"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn13">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="ovrly">
+                                <div class="cptn">
+                                    <div>
+                                        <h3>Lorem Ipsum</h3>
+                                        <p>By John Doe.</p>
+                                    </div>
+                                    <a href="#" class="fa fa-long-arrow-right"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn14">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="ovrly">
+                                <div class="cptn">
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                    <a href="#" class="fa fa-long-arrow-right"></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn15">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn16">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn17">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="cptn18">
+                            <img src="img/photo-4.jpg" alt="">
+                            <div class="cptn">
+                                <div>
+                                    <h3>Lorem Ipsum</h3>
+                                    <p>By John Doe.</p>
+                                </div>
+                                <a href="#" class="fa fa-long-arrow-right"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section clearfix">
+                <div class="sec-header col-xs-10 col-xs-offset-1">
+                    <h1>Images</h1>
+                </div>
+                <div class="items-container col-xs-12">
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="image01">
+                            <img src="img/photo-5.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="image02">
+                            <img src="img/photo-5.jpg" alt="">
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="image03">
+                            <img src="img/photo-5.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="image04">
+                            <img src="img/photo-5.jpg" alt="">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="image05">
+                            <img src="img/photo-5.jpg" alt="" class="imgB">
+                            <img src="img/photo-5.jpg" alt="" class="imgT">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="image06">
+                            <img src="img/photo-5.jpg" alt="" class="imgB">
+                            <img src="img/photo-5.jpg" alt="" class="imgT">
+                            <div class="ovrly"></div>
+                            <div class="buttons">
+                                <a href="#" class="fa fa-link"></a>
+                                <a href="#" class="fa fa-search"></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="section clearfix">
+                <div class="sec-header col-xs-10 col-xs-offset-1">
+                    <h1>Social Media Buttons</h1>
+                </div>
+                <div class="items-container col-xs-12">
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="sBtn01">
+                            <img src="img/photo-6.jpg" alt="">
+                            <div class="list-container">
+                                <ul class="btn-list">
+                                    <li>
+                                        <a href="#" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-dribbble"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-pinterest-p"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="sBtn02">
+                            <img src="img/photo-6.jpg" alt="">
+                            <div class="list-container">
+                                <ul class="btn-list">
+                                    <li>
+                                        <a href="#" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-dribbble"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-pinterest-p"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="sBtn05">
+                            <img src="img/photo-6.jpg" alt="">
+                            <div class="list-container">
+                                <ul class="btn-list">
+                                    <li>
+                                        <a href="#" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-dribbble"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-pinterest-p"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="item col-lg-3 col-sm-4 col-xs-6">
+
+
+                        <div class="sBtn06">
+                            <img src="img/photo-6.jpg" alt="">
+                            <div class="list-container">
+                                <ul class="btn-list">
+                                    <li>
+                                        <a href="#" class="fa fa-facebook"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-plus"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-dribbble"></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="fa fa-pinterest-p"></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
     </div>
-    <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.14.6/vconsole.min.js"></script>
-    <script>
-
-        window.onload = function () {
-
-            var vConsole = new VConsole();
-            //最后所有信息--统一配置在这里  [用于接口和wx-open-launch-weapp---这两个地方]
-            // var allInfo = {
-            //     AppID: wx893191f09cc6940d,//1.(小程序ID) 
-            //     //2.AppSecret(小程序密钥) 存在服务器
-            //     jump_wxa:
-            //     {
-            //         //请求 URL Scheme接口的参数
-            //         "path": "/pages/home/homePage",
-            //         "query": "",
-            //         "env_version": "release"
-            //     },
-            // };
-
-            /*
-                微信版本要求为：7.0.12及以上。 系统版本要求为：iOS 10.3及以上、Android 5.0及以上。
-                参考文档
-                https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/Wechat_Open_Tag.html#%E5%BC%80%E6%94%BE%E6%A0%87%E7%AD%BE%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3
-                https://developers.weixin.qq.com/miniprogram/dev/wxcloud/guide/staticstorage/jump-miniprogram.html
-    
-            */
-            // 获取URLScheme，这里是固定死的，你需要后端开发人员为你准备个接口或云函数返回URLScheme
-            const getURLScheme = (path, query) => {
-                return new Promise((resolve, reject) => {
-                    setTimeout(() => {
-                        resolve("weixin://dl/business/?t=5QaocCi6ywt")
-                    }, 10);
-                })
-            }
-            // 外部手机浏览器打开URL Scheme，一般会有提示，接受打开即可
-            const openWeapp = async (onBeforeJump) => {
-                //获取url scheme
-                const openlink = await getURLScheme()
-
-                if (onBeforeJump) {
-                    onBeforeJump()
-                }
-                location.href = openlink
-            }
-            // 使用开放标签打开小程序时调用，注入wx.config的配置信息,使用小程序云开发静态网站托管的网页可以绕过鉴权，公众号需要后端接口配合返回鉴权参数
-            const getWXConfig = async () => {
-                const config = {
-                    appId: 'wx893191f09cc6940d', // 已认证的小程序appid或已认证的服务号appid
-                    timestamp: 0, // 必填，使用小程序云开发静态网站托管的网页填任意数字即可,无须鉴权
-                    nonceStr: 'nonceStr', // 必填，使用小程序云开发静态网站托管的网页填任意非空字符串即可,无须鉴权
-                    signature: 'signature', // 必填，使用小程序云开发静态网站托管的网页填任意非空字符串即可,无须鉴权
-                }
-
-                return config
-            }
-            const start = async () => {
-                const ua = navigator.userAgent.toLowerCase()
-                // 企业微信
-                const isWXWork = ua.match(/wxwork/i) == 'wxwork'
-                // 微信浏览器
-                const isWeixin = !isWXWork && ua.match(/MicroMessenger/i) == 'micromessenger'
-                let isMobile = false
-                let isDesktop = false
-                if (navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|IEMobile)/i)) {
-                    isMobile = true
-                } else {
-                    isDesktop = true
-                }
-
-                if (isDesktop) {
-                    // 在 pc 上则给提示引导到手机端打开
-                    const containerEl = document.getElementById('desktop-web-container')
-                    containerEl.classList.remove('hidden')
-                    containerEl.classList.add('full', 'desktop-web-container')
-                    // 生成当前页面二维码
-                    new QRCode('qrcode', {
-                        text: document.URL,
-                        width: 200,
-                        height: 200,
-                        colorDark: '#000000',
-                        colorLight: '#ffffff',
-                        correctLevel: QRCode.CorrectLevel.H
-                    });
-                } else if (isWeixin) {
-                    //如果微信浏览器，通过开放标签打开小程序
-                    const containerEl = document.getElementById('wechat-web-container')
-                    containerEl.classList.remove('hidden')
-                    containerEl.classList.add('full', 'wechat-web-container')
-
-                    const launchBtn = document.getElementById('launch-btn')
-                    // launchBtn.addEventListener('error', function (e) {
-                    //     console.log('用户拒绝跳转或跳转异常', e.detail)
-                    // })
-                    launchBtn.addEventListener('ready', function (e) {
-                        console.log('开放标签 ready');
-                    })
-                    launchBtn.addEventListener('launch', function (e) {
-                        console.log('开放标签 success');
-
-                    })
-                    launchBtn.addEventListener('error', function (e) {
-                        console.log('开放标签 fail', e.detail)
-                    })
-
-                    const config = await getWXConfig()
-                    wx.config({
-                        ...config,
-                        jsApiList: ['chooseImage'], // 安卓上必填一个，随机即可
-                        openTagList: ['wx-open-launch-weapp'], // 填入打开小程序的开放标签名
-                    })
-                } else {
-                    // 在非微信的外部手机浏览器使用URLScheme打开小程序
-                    const containerEl = document.getElementById('public-web-container')
-                    containerEl.classList.remove('hidden')
-                    containerEl.classList.add('full', 'public-web-container')
-
-                    const buttonEl = document.getElementById('public-web-jump-button')
-                    const buttonLoadingIcon = document.getElementById('public-web-jump-button-loading-icon')
-                    const buttonLoadingText = document.getElementById('public-web-jump-button-loading-text')
-                    try {
-                        // 自动执行，打开URLScheme
-                        await openWeapp(() => {
-                            buttonEl.classList.remove('weui-btn_loading')
-                            buttonLoadingIcon.classList.add('hidden')
-                            buttonLoadingText.classList.add('hidden')
-                        })
-                    } catch (e) { }
-                }
-            }
-            start()
 
 
-        };
-
-    </script>
 </body>
 
 </html>
